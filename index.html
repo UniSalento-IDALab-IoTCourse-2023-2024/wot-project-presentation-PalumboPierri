@@ -20,8 +20,17 @@
         <!-- Main content -->
         <main class="w-3/4 p-8">
             <section id="about" class="mb-8">
-                <h2 class="text-3xl font-bold mb-4">Informazioni sul Progetto</h2>
-                <p>Questa pagina presenta il progetto sviluppato per il corso IoT, che ha l'obiettivo di monitorare il rumore e di inviare notifiche in tempo reale tramite dispositivi Bluetooth vicini...</p>
+                <h2 class="text-3xl font-bold mb-4">Introduzione</h2>
+                <p>Il progetto assegnato si concentra su un problema rilevante negli ambienti industriali caratterizzati da alti livelli di rumore: la protezione dell'udito dei lavoratori. In molte zone industriali, il rumore può superare gli 85 dB, un livello considerato dannoso per l'udito umano se l'esposizione è prolungata.
+
+                    L'obiettivo del nostro sistema è monitorare costantemente i livelli sonori e inviare avvisi rapidi ai lavoratori quando viene superata questa soglia.
+                    
+                    Per affrontare e risolvere questa sfida, è stato sviluppato un sistema che utilizza un Raspberry Pi 4, configurato come client per il monitoraggio in tempo reale del rumore. Il dispositivo raccoglie i dati acustici da un Beacon simulato e li trasmette a un server, che si occupa di elaborare le informazioni e di visualizzarle su un computer.
+                    
+                    Quando il sistema rileva livelli di rumore superiori a 85 dB, invia immediatamente una notifica per avvisare i lavoratori, segnalando la necessità di adottare misure di protezione. Questa funzione è particolarmente utile in ambienti dove i livelli sonori possono cambiare improvvisamente, mettendo a rischio la salute degli operatori.
+                
+                    È stato inoltre implementato un algoritmo di deep learning basato su una rete neurale feedforward, in grado di classificare e riconoscere i vari tipi di suoni presenti nell'ambiente. Questo algoritmo è stato addestrato su un dataset contenente 8.000 suoni, suddivisi in diverse categorie. Una volta completato l'addestramento, l'algoritmo è in grado di analizzare un suono e restituirne la categoria di appartenenza con una precisione del 70%.
+                </p>
             </section>
 
             <section id="features" class="mb-8">
@@ -33,16 +42,59 @@
                 </ul>
             </section>
 
-            <section id="conclusions" class="mb-8">
-                <h2 class="text-3xl font-bold mb-4">Conclusioni</h2>
-                <p>Il sistema consente di monitorare le condizioni ambientali e di inviare notifiche se i livelli di rumore superano una soglia critica. Sviluppi futuri potrebbero includere l'integrazione con ulteriori sensori...</p>
-            </section>
-
             <!-- Diagram image -->
             <section class="mb-8">
                 <h2 class="text-3xl font-bold mb-4">Architettura del Sistema</h2>
                 <img src="images/architettura 2.png" alt="Diagramma del sistema" class="w-full h-auto shadow-md">
             </section>
+            
+            <section class="mb-8">
+                <h2 class="text-3xl font-bold mb-4">Funzionamento progetto</h2>
+                <img src="images/funzionamento .png" alt="Diagramma del sistema" class="w-full h-auto shadow-md">
+            </section>
+            
+            <section id="about" class="mb-8">
+                <h2 class="text-3xl font-bold mb-4">Caso d'uso: Notifica Intelligente</h2>
+                <ul class="list-disc list-inside">
+                    <li>Beacon non rilevato o spento​</li>
+                    <li>Il lavoratore si trova a una ​distanza sicura</li>
+                    <li>Il lavoratore si trova troppo vicino​ e il rumore supera la soglia​</li>
+                </ul>
+                <img src="images/notifiche.png" alt="Diagramma del sistema" class="w-full h-auto shadow-md mt-4">
+            </section>
+
+            <section class="mb-8">
+                <p>Grafico che visualizza a che distanza si trova ​il Beacon il tempo reale
+                </p>
+                <img src="images/notifiche 2.png" alt="Diagramma del sistema" class="w-full h-auto shadow-md mt-4">
+            </section>
+
+
+            <section id="about" class="mb-8">
+                <h2 class="text-3xl font-bold mb-4">Caso d'uso: Machine learning e Categorizzazione del suono</h2>
+                <p>Il processo comprende la preparazione
+                    dei dati, l’estrazione delle caratteristiche audio, l’espansione dei dati tramite tecniche di
+                    data augmentation, l’addestramento di una rete neurale e la previsione della categoria di
+                    un nuovo file audio.
+                </p>
+                <img src="images/drill.png" alt="Diagramma del sistema" class="w-full h-auto shadow-md mt-4">
+            </section>
+
+            
+
+            <section id="about" class="mb-8">
+                <h2 class="text-3xl font-bold mb-4">Caso d'uso: Analisi di un suono</h2>
+                <p>
+                    È disponibile un pulsante che consente di selezionare un suono da analizzare. Durante la riproduzione, viene mostrato un grafico ampiezza-frequenza che illustra l'andamento del suono. Inoltre, il sistema informa l'utente se il suono è dannoso per l'udito umano.
+                </p>
+                <img src="images/graf2.jpg" alt="Diagramma del sistema" class="w-full h-auto shadow-md mt-4">
+            </section>
+            
+
+
+
+            
+            
         </main>
     </div>
 </body>
